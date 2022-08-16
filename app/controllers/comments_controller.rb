@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    before_actioin :set_post
+    before_action :set_post
 
     def create
         @post.comments.create! params.required(:comment).permit(:content)
